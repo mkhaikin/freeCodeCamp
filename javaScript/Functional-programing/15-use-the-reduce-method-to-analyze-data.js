@@ -114,14 +114,15 @@ var watchList = [
   
   function getRating(watchList){
     // Only change code below this line
-    // const averageRating = watchList.reduce((avrRating, movie) => {
-    //   return movie['Title']
-    // }, 0);
+    var averageRating;
   
     const filteredList = watchList.filter(movie => movie['Director'] === 'Christopher Nolan');
-    const averageRating = filteredList.reduce((avrRating, movie) => (avrRating + parseFloat(movie['imdbRating'])), 0);
   
+    averageRating = (filteredList.reduce((avrRating, movie) => 
+      (avrRating + parseFloat(movie['imdbRating'])), 0))/filteredList.length;
+      
     // Only change code above this line
-    return averageRating/filteredList.length
-  }
-  console.log(getRating(watchList));
+    return averageRating;
+  
+    }
+    console.log(getRating(watchList))
