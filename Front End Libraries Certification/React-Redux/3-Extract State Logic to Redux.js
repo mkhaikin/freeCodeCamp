@@ -11,8 +11,8 @@ const addMessage = (message) => {
 const messageReducer = (state = [], action) => {
     switch(action.type){
         case ADD :
-        return [...state, action.message];
-    default : return state;
+            return [...state, action.message];
+        default : return state;
     }
 }
 
