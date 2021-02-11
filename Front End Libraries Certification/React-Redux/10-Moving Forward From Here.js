@@ -22,4 +22,4 @@ ReactDOM.render(
 */
 
 // Only change code below this line
-console.log('Now I know React and Redux!')
+console.log('Now I know React and Redux!');
